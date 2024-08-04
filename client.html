@@ -53,9 +53,12 @@
                     const downloadButton = document.createElement('button');
                     downloadButton.textContent = 'Download';
                     downloadButton.addEventListener('click', () => {
+                        // Create a link element
                         const link = document.createElement('a');
                         link.href = url;
-                        link.download = itemRef.name;
+                        link.download = itemRef.name; // Set the filename for the download
+                        
+                        // Append the link to the body, click it, then remove it
                         document.body.appendChild(link);
                         link.click();
                         document.body.removeChild(link);
@@ -75,4 +78,4 @@
     </script>
 </body>
 </html>
-<!-- new code -->
+<!-- newcode -->
